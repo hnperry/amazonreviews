@@ -1,0 +1,11 @@
+Step 2: Data Cleaning
+
+After querying our database and exporting our results to Excel, I ended up with 7900 records of data. My steps for cleaning the data are below:
+
+1. Removed duplicate and blank records
+2. Since this is Amazon, there may be people who are reviewing the quality of service they received from Amazon rather than the book. I searched for the keywords “damaged,” “broken,” “delivered,” “arrived,” “book cover,” “book jacket,” “disappointed,” “condition,” “shipping,” “ripped,” “torn,” “unhappy,” “unsatisfied,” “bad,” “product,” “quality,” “counterfeit,” “cheap,” “broke,” “wrong,” “useless,” “crap,” “junk,” “worst,” “error,” “shame,” “garbage,” “hated,” “bother,” “annoy,” “condition,” “arrived,” and “amazon,” and removed reviews that were not assessing the quality of the novel. I came to these words by referencing this sentiment analysis paper by RIT scholar Ammar Rashed Hamdallah which identified the most frequently used words in Amazon reviews.
+3. I found a few instances of reviews along the lines of “5 stars for Murakami, 0 for the publisher’s quality”, so I updated those to reflect their opinion of the actual book.
+4. I deleted reviews not in English, which will be important for future textual analysis. I translated a few simple reviews saying “Excelente,” “Tres bien,” etc. to preserve as much data as possible.
+5. Removed all non-English characters that were distorted during data transfer, i.e. “Ä”, “ü,” etc. I also removed all extra spaces in the review text.
+
+At the end of the data cleaning process, we end up with 7709 unique records of English reviews of the top 10 most reviewed Murakami novels on Amazon.

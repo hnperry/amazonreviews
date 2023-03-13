@@ -1,0 +1,13 @@
+SELECT 
+	Reviews.id as review_id, 
+	Reviews.name as reviewer_name, 
+	Reviews.date as review_date, 
+	Reviews.rating as review_rating, 
+	Reviews.review_text, 
+	Books.name as book_name
+FROM 
+	Reviews
+JOIN 
+	Books 
+ON 
+	Books.id = Reviews.book
