@@ -14,7 +14,7 @@ HEADERS = ({'User-Agent':
 
 # Sent get request to url
 
-URL = 'https://www.amazon.com/Wind-Up-Bird-Chronicle-Vintage-International-ebook/product-reviews/B003XT605Y/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews'
+URL = 'https://www.amazon.com/Wind-Up-Bird-Chronicle-Vintage-International-ebook/product-reviews/B003XT605Y/'
 webpage = requests.get(URL, headers = HEADERS)
 
 # Create soup
@@ -30,8 +30,8 @@ clean_title = clean_title[0]
 clean_title.rstrip()
 print("Scraping Reviews from", clean_title)
 
-# Pass API key so Jeff Bezos doesn't get angry with me
-# API key has been changed to protect my wallet
+# Using API key so Jeff Bezos doesn't get angry with me
+# API key has been altered for security purposes
 
 params = {'api_key': "547e3e994ea35cf8187aswf2314cd6s772", 'url': URL}
 response = requests.get('http://api.scraperapi.com/',   params=urlencode(params))
@@ -144,7 +144,6 @@ while page < 130:
 
     # At this point I encountered an issue where some pages would display an ad that used the same span class tag, so the data would get messed up
     # I decided to add in a function to skip any page that does not contain exactly the amount of review dates we expect
-    # Because in the wise words of Sweet Brown, ain't nobody got time for that
 
     if len(review_dates) != 12:
         print("Skipped page", page)
@@ -195,7 +194,7 @@ while page < 130:
         review_text_clean.append(data_string)
         data_string = ""
 
-    # All in all, we only skipped around 5-10 pages per book which is a drop in the bucket for many of these
+    # All in all, we only skipped around 5-10 pages per book
     # If we got this far, add data to clean lists and dump lists for reuse
     
     review_dates_clean = review_dates_clean + review_dates[2:]
