@@ -1,6 +1,4 @@
-# Amazon Book Reviews: Web Scraping and Data Visualization
-
-Hello and welcome to my data project! I have spent the past 6 months teaching myself some data analytics and visualization skills. My journey has culminated in this project: scraping, analyzing, and visualizing data from Amazon book reviews.
+# Evaluating Customer Sentiment: Web Scraping and Visualizing Amazon Reviews
 
 The idea for this project came to me during book club- we were reading one of Haruki Murakami’s novels, and the opinions seemed mixed. If you aren’t familiar with Murakami, he is a critically-acclaimed Japanese author best known for his magical realism-style novels. From his metaphorically rich dream-like sequences to his taboo and graphic depictions of sex and gore, Murakami’s novels can be quite polarizing in the literature world. After seeing the reactions of the members of the book club I became curious about what the general population thinks of his books, so I turned to the modern-day Agora: Amazon reviews.
 
